@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main_title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+.main_form {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 1rem;
+}
+
+input {
+    all: unset;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    border: 2px solid #f7c42c;
+    background-color: transparent;
+    color: #fff;
+    text-align: start;
+}
+
+input:focus {
+    border-color: #000;
+}
+
+button {
+    all: unset;
+    background: #f7c42c;
+    color: #000;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #000;
+    color: #f7c42c;
+    border-color: #f7c42c;
+}
+
+.main_scoreboard-wrapper {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.main_scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.main_scoreboard:hover {
+    background: #252525;
+}
+
+.main_player-name {
+    font-weight: bold;
+}
+
+.main_time-stamp {
+    color: #686868;
+    font-size: 0.8em;
+}
+
+.main_scoreboard-btn-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+/* Animation for scoreboard entries */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main_scoreboard {
+    animation: fadeInUp 0.5s ease;
+}
+
+
+.main_scoreboard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .main_form {
+        grid-template-columns: 1fr;
+    }
+
+    .main_scoreboard {
+        grid-template-columns: 1fr;
+    }
+}
